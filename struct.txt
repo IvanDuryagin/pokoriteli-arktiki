@@ -1,0 +1,25 @@
+/
+├── index.html
+├── style.css
+├── fonts/
+│   ├── ubuntu.woff2
+│   └── open-sans.woff2
+├── files/
+│   └── pravila-pokoriteli-arktiki.pdf   ← ваш PDF с правилами
+└── img/
+    ├── hero-cover.jpg          (обложка коробки — 1-я страница коробка.pdf)
+    ├── og-image.jpg            (1200×630 для соцсетей)
+    ├── favicon-32.png
+    ├── favicon-180.png
+    ├── gallery-scientist.jpg   (карта «Учёный»)
+    ├── gallery-guide.jpg       (карта «Проводник»)
+    ├── gallery-doctor.jpg      (карта «Врач»)
+    ├── gallery-engineer.jpg    (карта «Инженер»)
+    ├── gallery-data-fram.jpg   (карта данных «Фрам»)
+    ├── gallery-data-norge.jpg  (карта данных «Дирижабль Норге»)
+    ├── gallery-tool-compass.jpg
+    ├── gallery-tool-iceaxe.jpg
+    ├── gallery-res-fuel.jpg
+    ├── gallery-res-food.jpg
+    ├── gallery-hex-pole.jpg
+    └── gallery-hex-aurora.jpg

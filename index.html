@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Покорители Арктики — настольная игра о гонке к Северному полюсу</title>
+  <meta name="description" content="Покорители Арктики — настольная стратегическая игра для 2–6 игроков. Соберите экспедицию, пройдите море и льды, водрузите флаг на Северном полюсе и доставьте его в свой Порт. 60–90 минут, 14+.">
+  
+  <link rel="canonical" href="https://example.com/">
+
+  <meta name="theme-color" content="#eaf3f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Шрифты -->
+  <link rel="preload" href="fonts/Pobeda-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Pobeda-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
+</head>
+<body>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <header class="sticky-header">
+    <div class="container header-container">
+      <a href="#" class="header-logo" aria-label="Покорители Арктики — на главную">Покорители&nbsp;Арктики</a>
+
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="header-nav" id="primary-nav" aria-label="Основная навигация">
+        <a href="#about">О игре</a>
+        <a href="#features">Особенности</a>
+        <a href="#components">В коробке</a>
+        <a href="#howto">Как играть</a>
+        <a href="#countries">Страны</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#buy">Купить</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Переключить тему" aria-pressed="false">Тёмная тема</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+
+    <!-- ================= HERO (Возврат к полноэкранному фону) ================= -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Настольная игра</p>
+          <h1 class="hero__title">Покорители Арктики</h1>
+          <p class="hero__subtitle">Затерянные во льдах</p>
+
+          <ul class="hero__badges">
+            <li>2–6 игроков</li>
+            <li>60–90 минут</li>
+            <li>14+</li>
+          </ul>
+
+          <div class="hero__actions">
+            <a href="#buy" class="button button--primary">Купить игру</a>
+            <a href="files/pravila-pokoriteli-arktiki.pdf" class="button button--hero-secondary" target="_blank" rel="noopener">Скачать правила</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= О ИГРЕ ================= -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">О игре</h2>
+
+        <div class="about__content">
+          <p class="about__lead">
+            Бескрайняя, безмолвная Арктика. Вы — руководители национальных экспедиций,
+            готовых вписать свои имена в историю. Ваша цель — точка, где сходятся все
+            меридианы Земли.
+          </p>
+          <p>
+            Но помните: Северный полюс покоряется не самым бесстрашным, а самым
+            подготовленным. Корабли зажимает вековыми торосами, припасы тают на глазах,
+            а ледяной буран готов в любой момент преградить ваш путь.
+          </p>
+          <p>
+            Соберите команду из трёх специалистов, снарядите собачью упряжку и корабль,
+            проложите путь сквозь неизведанное море и водрузите флаг на вершине мира.
+            А затем — удержите его на обратном пути к своему Порту.
+          </p>
+        </div>
+
+        <blockquote class="about__quote">
+          «Пока вы развиваете команду у себя в Порту, соперники уже на пути к Полюсу».
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ================= ОСОБЕННОСТИ (Bento Grid) ================= -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Ключевые особенности</h2>
+
+        <div class="features__bento">
+          <article class="bento-card bento-card--wide">
+            <div class="bento-card__bg-num">01</div>
+            <div class="bento-card__content">
+              <h3 class="bento-card__title">Экономический симулятор</h3>
+              <p class="bento-card__desc">
+                Управляйте ресурсами страны: закупайте продовольствие, топливо, инструменты
+                и данные. Готовьте самую эффективную команду — но не опаздывайте к старту гонки.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card bento-card--tall">
+            <div class="bento-card__bg-num">02</div>
+            <div class="bento-card__content">
+              <h3 class="bento-card__title">Модульное поле</h3>
+              <p class="bento-card__desc">
+                91 гекс, которые выкладываются рубашкой вверх и собираются случайным образом
+                каждую партию. Течения, трещины во льдах, заброшенные стоянки и тайны
+                пропавшей экспедиции.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card">
+            <div class="bento-card__bg-num">03</div>
+            <div class="bento-card__content">
+              <h3 class="bento-card__title">Историческое наследие</h3>
+              <p class="bento-card__desc">
+                16 уникальных карт Данных — «Фрам» Нансена, «Вега» Норденшельда, дирижабль
+                «Норге». Каждая карта — частичка реальной экспедиции.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card">
+            <div class="bento-card__bg-num">04</div>
+            <div class="bento-card__content">
+              <h3 class="bento-card__title">Прокачка команды</h3>
+              <p class="bento-card__desc">
+                Развивайте Штурмана, Проводника, Инженера, Врача и Учёного до третьего уровня,
+                чтобы открыть их суперспособности.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card bento-card--wide">
+            <div class="bento-card__bg-num">05</div>
+            <div class="bento-card__content">
+              <h3 class="bento-card__title">Азартный полярный финиш</h3>
+              <p class="bento-card__desc">
+                Забрать флаг открытия на Полюсе — лишь половина дела. Вас ждёт состязание
+                с соперниками на обратном пути к Порту своей страны. Флаг можно отобрать в конфликте.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card bento-card--wide">
+            <div class="bento-card__bg-num">06</div>
+            <div class="bento-card__content">
+              <h3 class="bento-card__title">Корабли и упряжки</h3>
+              <p class="bento-card__desc">
+                Три уровня корабля и три уровня собачьей упряжки: скорость, мощность,
+                грузоподъёмность. Каждое улучшение — это выбор между темпом и запасом.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= СНАРЯЖЕНИЕ ЭКСПЕДИЦИИ ================= -->
+    <section class="components-dark" id="components">
+      <div class="container">
+        <h2 class="section-title">Снаряжение экспедиции</h2>
+
+        <div class="glass-grid">
+          <!-- Главная карточка -->
+          <div class="glass-card glass-card--main">
+            <div class="glass-card__bg-num" aria-hidden="true">91</div>
+            <div class="glass-card__content">
+              <h3 class="glass-card__title">Гекс игрового поля</h3>
+              <p class="glass-card__desc">Модульное поле, собираемое случайным образом каждую партию. Бесконечные вариации маршрутов.</p>
+            </div>
+          </div>
+
+          <!-- Сетка с второстепенными карточками -->
+          <div class="glass-subgrid">
+            <div class="glass-card">
+              <div class="glass-card__bg-num" aria-hidden="true">48</div>
+              <div class="glass-card__content">
+                <h3 class="glass-card__title">Фигурок</h3>
+                <p class="glass-card__desc">Деревянные фигурки людей, кораблей и собак.</p>
+              </div>
+            </div>
+
+            <div class="glass-card">
+              <div class="glass-card__bg-num" aria-hidden="true">150</div>
+              <div class="glass-card__content">
+                <h3 class="glass-card__title">Карт</h3>
+                <p class="glass-card__desc">Ресурсы, инструменты и исторические данные.</p>
+              </div>
+            </div>
+
+            <div class="glass-card">
+              <div class="glass-card__bg-num" aria-hidden="true">6</div>
+              <div class="glass-card__content">
+                <h3 class="glass-card__title">Экранов стран</h3>
+                <p class="glass-card__desc">Шесть уникальных фракций со своими бонусами.</p>
+              </div>
+            </div>
+
+            <div class="glass-card">
+              <div class="glass-card__bg-num" aria-hidden="true">1</div>
+              <div class="glass-card__content">
+                <h3 class="glass-card__title">Флажок открытия</h3>
+                <p class="glass-card__desc">Главный трофей, который нужно доставить в Порт.</p>
+              </div>
+            </div>
+            
+            <div class="glass-card">
+              <div class="glass-card__bg-num" aria-hidden="true">1</div>
+              <div class="glass-card__content">
+                <h3 class="glass-card__title">Кубик</h3>
+                <p class="glass-card__desc">Для разрешения конфликтов и проверок событий.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= КАК ИГРАТЬ ================= -->
+    <section class="howto" id="howto">
+      <div class="container">
+        <h2 class="section-title">Как играть</h2>
+
+        <div class="phases">
+          <article class="phase-card">
+            <div class="phase-card__num">1.</div>
+            <div class="phase-card__body">
+              <h3 class="phase-card__title">Подготовка в Порту</h3>
+              <p class="phase-card__desc">
+                Наймите трёх специалистов, купите собачью упряжку и постройте корабль.
+                Здесь же можно повышать уровни, закупать инструменты и обмениваться
+                с другими игроками.
+              </p>
+            </div>
+          </article>
+
+          <article class="phase-card">
+            <div class="phase-card__num">2.</div>
+            <div class="phase-card__body">
+              <h3 class="phase-card__title">Поход по морю</h3>
+              <p class="phase-card__desc">
+                В начале хода сбросьте 1 топливо и переместите корабль. Переворачивайте
+                гексы и разбирайтесь с течениями и айсбергами. Для входа в Арктику нужен маяк.
+              </p>
+            </div>
+          </article>
+
+          <article class="phase-card">
+            <div class="phase-card__num">3.</div>
+            <div class="phase-card__body">
+              <h3 class="phase-card__title">Экспедиция по Арктике</h3>
+              <p class="phase-card__desc">
+                На суше каждый ход стоит 1 продовольствие. Упряжка идёт со скоростью 1,
+                а карты событий и уровни специалистов разгоняют её вперёд — или отбрасывают
+                назад.
+              </p>
+            </div>
+          </article>
+
+          <article class="phase-card">
+            <div class="phase-card__num">4.</div>
+            <div class="phase-card__body">
+              <h3 class="phase-card__title">Флаг и победа</h3>
+              <p class="phase-card__desc">
+                Первый, кто встал на гекс «Северный полюс», забирает флаг открытия.
+                Побеждает тот, кто доставит его в свой Порт — но по дороге флаг можно
+                и отобрать.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="howto__note">
+          <a href="files/pravila-pokoriteli-arktiki.pdf" class="button button--primary" target="_blank" rel="noopener">Полные правила (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= СТРАНЫ ================= -->
+    <section class="countries" id="countries">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Шесть экспедиций</h2>
+        </div>
+
+        <div class="countries__scroll">
+          <article class="country-card">
+            <!--<div class="country-card__flag" aria-hidden="true">🇷🇺</div> -->
+            <h3 class="country-card__name">Россия</h3> 
+            <p class="country-card__row"><span class="country-card__label">Старт:</span> Инженер 3, Штурман 2, +2 П</p>
+            <p class="country-card__row"><span class="country-card__label">Бонус:</span> события с Инженером и Штурманом дают +1 карту Данных</p>
+          </article>
+
+          <article class="country-card">
+            <!-- div class="country-card__flag" aria-hidden="true">🇨🇦</div> -->
+            <h3 class="country-card__name">Канада</h3>
+            <p class="country-card__row"><span class="country-card__label">Старт:</span> Штурман 2, Собаки 3, 1 Инструмент, +4 Т</p>
+            <p class="country-card__row"><span class="country-card__label">Бонус:</span> после открытия Полюса упряжка проходит Арктику без П</p>
+          </article>
+
+          <article class="country-card">
+            <!-- <div class="country-card__flag" aria-hidden="true">🇺🇸</div> -->
+            <h3 class="country-card__name">США</h3>
+            <p class="country-card__row"><span class="country-card__label">Старт:</span> Корабль 2, +2 Т, +2 П</p>
+            <p class="country-card__row"><span class="country-card__label">Бонус:</span> +2 П к доходу порта за каждый круг</p>
+          </article>
+
+          <article class="country-card">
+            <!-- <div class="country-card__flag" aria-hidden="true">🇳🇱</div> -->
+            <h3 class="country-card__name">Нидерланды</h3>
+            <p class="country-card__row"><span class="country-card__label">Старт:</span> Врач 3, 1 Данные, +4 П</p>
+            <p class="country-card__row"><span class="country-card__label">Бонус:</span> покупка карт Данных на 2 П дешевле</p>
+          </article>
+
+          <article class="country-card">
+            <!-- <div class="country-card__flag" aria-hidden="true">🇳🇴</div> -->
+            <h3 class="country-card__name">Норвегия</h3>
+            <p class="country-card__row"><span class="country-card__label">Старт:</span> Учёный 3, 2 Данные, +3 Т</p>
+            <p class="country-card__row"><span class="country-card__label">Бонус:</span> эффект трёх карт Усталости отодвигается на 3 хода</p>
+          </article>
+
+          <article class="country-card">
+            <!-- <div class="country-card__flag" aria-hidden="true">🇩🇰</div> -->
+            <h3 class="country-card__name">Дания</h3>
+            <p class="country-card__row"><span class="country-card__label">Старт:</span> Рейдер 2, 1 Инструмент, +4 П, +2 Т</p>
+            <p class="country-card__row"><span class="country-card__label">Бонус:</span> карты Инструментов «сбросьте» можно использовать повторно</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ГАЛЕРЕЯ ================= -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Компоненты вблизи</h2>
+        </div>
+
+        <div class="gallery__scroll">
+          <button class="gallery-card" type="button" data-title="Карта специалиста «Учёный», 2 уровень" data-desc="Учёный усиливает эффекты карт Данных и открывает доступ к бонусам при исследовании Арктики.">
+            <img src="img/gallery-scientist.webp" alt="Карта специалиста «Учёный»" loading="lazy">
+            <span class="gallery-card__caption">Учёный</span>
+          </button>
+
+          <button class="gallery-card" type="button" data-title="Карта специалиста «Проводник», 1 уровень" data-desc="Проводник помогает в событиях на суше и снижает риски при движении.">
+            <img src="img/gallery-guide.webp" alt="Карта специалиста «Проводник»" loading="lazy">
+            <span class="gallery-card__caption">Проводник</span>
+          </button>
+
+          <button class="gallery-card" type="button" data-title="Карта специалиста «Врач»" data-desc="Врач отменяет эффекты болезней и эпидемий, а также возвращает раненых в строй.">
+            <img src="img/gallery-doctor.webp" alt="Карта специалиста «Врач»" loading="lazy">
+            <span class="gallery-card__caption">Врач</span>
+          </button>
+
+          <button class="gallery-card" type="button" data-title="Карта специалиста «Инженер»" data-desc="Инженер чинит упряжку и инструменты, снижает урон от трещин и провалов.">
+            <img src="img/gallery-engineer.webp" alt="Карта специалиста «Инженер»" loading="lazy">
+            <span class="gallery-card__caption">Инженер</span>
+          </button>
+
+          <button class="gallery-card" type="button" data-title="Карта Данных «Фрам» Нансена" data-desc="В 1893–1896 годах «Фрам» вмёрзло в лёд. Эффект: восстанавливает 10 продовольствия.">
+            <img src="img/gallery-data-fram.webp" alt="Карта данных «Фрам»" loading="lazy">
+            <span class="gallery-card__caption">«Фрам» Нансена</span>
+          </button>
+
+          <button class="gallery-card" type="button" data-title="Карта Данных «Дирижабль Норге»" data-desc="12 мая 1926 года дирижабль «Норге» пролетел над Северным полюсом. Эффект: +1 специалист.">
+            <img src="img/gallery-data-norge.webp" alt="Карта данных «Норге»" loading="lazy">
+            <span class="gallery-card__caption">Дирижабль «Норге»</span>
+          </button>
+          
+          <button class="gallery-card" type="button" data-title="Гекс «Северный полюс»" data-desc="Центральный гекс поля. Первый, кто встал на него, забирает флажок открытия.">
+            <img src="img/gallery-hex-pole.webp" alt="Гекс «Северный полюс»" loading="lazy">
+            <span class="gallery-card__caption">Северный полюс</span>
+          </button>
+
+          <button class="gallery-card" type="button" data-title="Гекс «Полярное сияние»" data-desc="Одно из событий центральной Арктики: пройдите вперёд на 1 клетку.">
+            <img src="img/gallery-hex-aurora.webp" alt="Гекс «Полярное сияние»" loading="lazy">
+            <span class="gallery-card__caption">Полярное сияние</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2 class="section-title section-title--center">Частые вопросы</h2>
+
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>Сколько человек может играть?</summary>
+            <p>От 2 до 6 игроков. Каждый играет за одну из шести стран: Россию, Канаду, США, Нидерланды, Норвегию или Данию.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Сколько длится партия?</summary>
+            <p>60–90 минут в зависимости от числа игроков и того, насколько агрессивно проходит финиш на обратном пути.</p>
+          </details>
+          <details class="faq__item">
+            <summary>С какого возраста?</summary>
+            <p>14+. Правила несложные, но игроку нужно держать в голове баланс ресурсов, уровни специалистов и маршрут.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Есть ли соло-режим?</summary>
+            <p>В базовой коробке соло-режима нет. Автор работает над одиночным сценарием «Пропавшая экспедиция» — следите за новостями.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= КУПИТЬ ================= -->
+    <section class="buy" id="buy">
+      <div class="container container--narrow buy__inner">
+        <h2 class="section-title section-title--center">Где купить</h2>
+        <p class="buy__lead">
+          Тираж готовится к печати. Оставьте заявку — сообщим о старте продаж
+          и пришлём PnP-версию для теста.
+        </p>
+
+        <div class="buy__actions">
+          <a href="mailto:duryagin1995@yandex.ru?subject=Заявка%20на%20«Покорители%20Арктики»" class="button button--primary">Оставить заявку</a>
+          <a href="#contacts" class="button button--ghost">Связаться с автором</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= КОНТАКТЫ ================= -->
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <h2 class="section-title">Контакты автора</h2>
+
+        <div class="contacts__grid">
+          <div class="contact-item">
+            <!-- <div class="contact-item__icon" aria-hidden="true">👤</div> -->
+            <div class="contact-item__content">
+              <h3 class="contact-item__title">Автор игры</h3>
+              <p>Дурягин Иван Александрович, Россия, Архангельск</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <!-- <div class="contact-item__icon" aria-hidden="true">✉️</div> -->
+            <div class="contact-item__content">
+              <h3 class="contact-item__title">Электронная почта</h3>
+              <p><a href="mailto:duryagin1995@yandex.ru">duryagin1995@yandex.ru</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">Покорители Арктики</span>
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <a href="#about">О игре</a>
+          <a href="#features">Особенности</a>
+          <a href="#components">В коробке</a>
+          <a href="#howto">Как играть</a>
+          <a href="#countries">Страны</a>
+          <a href="#gallery">Галерея</a>
+        </nav>
+        <small class="footer__copy">Покорители Арктики, 2026</small>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="modal" class="modal" aria-labelledby="modal-title" aria-modal="true">
+    <form method="dialog" class="modal__form">
+      <button class="modal-close" type="submit" aria-label="Закрыть окно">&times;</button>
+    </form>
+    <div class="modal-media">
+      <img id="modal-img" class="modal-img" alt="">
+    </div>
+    <div id="modal-text" class="modal-text"></div>
+  </dialog>
+
+  <script>
+  (function () {
+    'use strict';
+
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalText = document.getElementById('modal-text');
+
+    function openModal({ imgSrc, title, extraText }) {
+      modalImg.src = imgSrc;
+      modalImg.alt = title;
+      modalText.innerHTML = `<h3 id="modal-title" class="modal__title">${title}</h3><p>${extraText}</p>`;
+      modal.showModal();
+      document.body.style.overflow = 'hidden';
+    }
+
+    modal.addEventListener('close', () => {
+      document.body.style.overflow = '';
+      modalImg.removeAttribute('src');
+    });
+
+    modal.addEventListener('click', (e) => {
+      const rect = modal.getBoundingClientRect();
+      const inside = e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+      if (!inside) modal.close();
+    });
+
+    document.querySelectorAll('.gallery-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img');
+        openModal({
+          imgSrc: img.currentSrc || img.src,
+          title: card.dataset.title || '',
+          extraText: card.dataset.desc || ''
+        });
+      });
+    });
+
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('primary-nav');
+    
+    burger.addEventListener('click', () => {
+      const isOpen = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !isOpen);
+      nav.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open');
+    });
+
+    const toggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        htmlElement.classList.add('dark-mode');
+        toggleBtn.textContent = 'Светлая тема';
+        toggleBtn.setAttribute('aria-pressed', 'true');
+      } else {
+        htmlElement.classList.remove('dark-mode');
+        toggleBtn.textContent = 'Тёмная тема';
+        toggleBtn.setAttribute('aria-pressed', 'false');
+      }
+      localStorage.setItem('theme', theme);
+    }
+
+    applyTheme(localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    
+    toggleBtn.addEventListener('click', () => {
+      applyTheme(htmlElement.classList.contains('dark-mode') ? 'light' : 'dark');
+    });
+
+    const navLinks = document.querySelectorAll('.header-nav a[href^="#"]');
+    const sections = [...navLinks]
+      .map(a => document.querySelector(a.getAttribute('href')))
+      .filter(Boolean);
+
+    const progress = document.getElementById('scroll-progress');
+
+    function getScrollTop() { return window.scrollY || document.documentElement.scrollTop || 0; }
+    function getMaxScroll() {
+      const docH = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+      return Math.max(0, docH - window.innerHeight);
+    }
+    function atBottom() { return getScrollTop() >= getMaxScroll() - 2; }
+
+    function setActive(id) {
+      navLinks.forEach(a => {
+        const isActive = a.getAttribute('href') === '#' + id;
+        a.classList.toggle('is-active', isActive);
+        if (isActive) a.setAttribute('aria-current', 'page');
+        else a.removeAttribute('aria-current');
+      });
+    }
+
+    function updateActive() {
+      if (atBottom() && navLinks.length) {
+        setActive(navLinks[navLinks.length - 1].getAttribute('href').slice(1));
+        return;
+      }
+      const probe = 120;
+      let current = null;
+      sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top <= probe) current = sec.id;
+      });
+      setActive(current);
+    }
+
+    function updateProgress() {
+      const max = getMaxScroll();
+      const pct = max > 0 ? Math.min(100, (getScrollTop() / max) * 100) : 0;
+      progress.style.width = pct + '%';
+    }
+
+    window.addEventListener('scroll', () => { updateActive(); updateProgress(); }, { passive: true });
+    window.addEventListener('resize', () => { updateActive(); updateProgress(); });
+
+    updateActive();
+    updateProgress();
+  })();
+  </script>
+</body>
+</html>
