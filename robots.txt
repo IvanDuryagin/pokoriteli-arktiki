@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ivanduryagin.github.io/pokoriteli-arktiki/sitemap.xml
